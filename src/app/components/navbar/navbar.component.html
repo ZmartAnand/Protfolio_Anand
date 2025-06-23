@@ -1,0 +1,25 @@
+<nav class="fixed top-0 left-0 w-full bg-slate-800 text-white z-50 shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="text-lg font-bold">Anand Sivakumar</div>
+    <div class="space-x-6">
+      <a routerLink="/" routerLinkActive="text-blue-400">Home</a>
+      <a [routerLink]="['/about']" class="cursor-pointer hover:text-blue-400"
+        >About</a
+      >
+      <a [routerLink]="['/skills']" class="cursor-pointer hover:text-blue-400"
+        >Skills</a
+      >
+      <a [routerLink]="['/projects']" class="cursor-pointer hover:text-blue-400"
+        >Projects</a
+      >
+      <a
+        [routerLink]="['/experience']"
+        class="cursor-pointer hover:text-blue-400"
+        >Experience</a
+      >
+      <a [routerLink]="['/contact']" class="cursor-pointer hover:text-blue-400"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
