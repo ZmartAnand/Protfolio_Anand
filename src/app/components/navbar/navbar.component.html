@@ -1,4 +1,6 @@
-<div class="sticky top-0 bg-background">
+<div
+  class="fixed top-0 w-full z-50 bg-indigo-900/80 backdrop-blur-md shadow-lg border-b border-indigo-700"
+>
   <div class="p-7 lg:ms-12 flex justify-between items-center relative">
     <button
       class="lg:hidden m-0 justify-start absolute z-51"
@@ -14,57 +16,55 @@
 
     <div class="ml-10">
       <a
-        class="text-text-color text-2xl font-serif tracking-widest font-semibold"
+        class="text-white text-2xl font-serif tracking-widest font-semibold"
         routerLink="/"
-        >Software Developer
+        >PORTFOLIO..
       </a>
     </div>
 
-    <ul
-      class="hidden lg:flex gap-x-10 mr-40 text-lg text-text-color font-semibold"
-    >
+    <ul class="hidden lg:flex gap-x-10 mr-40 text-lg text-white font-semibold">
       <li>
         <a
           routerLink="/"
-          routerLinkActive="text-purple-400"
+          routerLinkActive="text-teal-400"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-fuchsia-400"
+          class="hover:text-teal-400"
           >Home</a
         >
       </li>
       <li>
         <a
           routerLink="about"
-          routerLinkActive="text-purple-400"
+          routerLinkActive="text-teal-400"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-fuchsia-400"
+          class="hover:text-teal-400"
           >About</a
         >
       </li>
       <li>
         <a
           routerLink="skills"
-          routerLinkActive="text-purple-400"
+          routerLinkActive="text-teal-400"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-fuchsia-400"
+          class="hover:text-teal-400"
           >Skills</a
         >
       </li>
       <li>
         <a
           routerLink="projects"
-          routerLinkActive="text-purple-400"
+          routerLinkActive="text-teal-400"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-fuchsia-400"
+          class="hover:text-teal-400"
           >Projects</a
         >
       </li>
       <li>
         <a
           routerLink="contact"
-          routerLinkActive="text-purple-400"
+          routerLinkActive="text-teal-400"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-fuchsia-400"
+          class="hover:text-teal-400"
           >Contact</a
         >
       </li>
@@ -78,10 +78,10 @@
         <li class="mt-15">
           <a
             routerLink="/"
-            routerLinkActive="text-purple-400"
+            routerLinkActive="text-teal-400"
             (click)="isMenuOpen = !isMenuOpen"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-fuchsia-400"
+            class="hover:text-teal-400"
             >Home</a
           >
         </li>
@@ -89,9 +89,9 @@
           <a
             routerLink="about"
             (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-purple-400"
+            routerLinkActive="text-teal-400"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-fuchsia-400"
+            class="hover:text-teal-400"
             >About</a
           >
         </li>
@@ -99,9 +99,9 @@
           <a
             routerLink="skills"
             (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-purple-400"
+            routerLinkActive="text-teal-400"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-fuchsia-400"
+            class="hover:text-teal-400"
             >Skills</a
           >
         </li>
@@ -109,9 +109,9 @@
           <a
             routerLink="projects"
             (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-purple-400"
+            routerLinkActive="text-teal-400"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-fuchsia-400"
+            class="hover:text-teal-400"
             >Projects</a
           >
         </li>
@@ -119,9 +119,9 @@
           <a
             routerLink="contact"
             (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-purple-400"
+            routerLinkActive="text-teal-400"
             [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-fuchsia-400"
+            class="hover:text-teal-00"
             >Contact</a
           >
         </li>
