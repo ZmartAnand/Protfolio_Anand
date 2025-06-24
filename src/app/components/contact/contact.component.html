@@ -1,1 +1,72 @@
-<p>contact works!</p>
+<section
+  class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex flex-col justify-center items-center px-4 py-16"
+>
+  <!-- Heading -->
+  <h2 class="text-3xl font-bold mb-4 inline-block px-4 py-2">Contact Me</h2>
+  <p class="text-gray-300 mb-10 text-center">
+    Get in touch with me to discuss your project or any questions you may have
+  </p>
+
+  <!-- Contact Card -->
+  <div
+    class="bg-slate-800/70 border border-teal-500 rounded-xl shadow-xl p-8 w-full max-w-md"
+  >
+    <div class="flex items-center gap-2 mb-6">
+      <span class="text-teal-400 text-xl">📩</span>
+      <h3 class="text-xl font-bold">Send Me a Message</h3>
+    </div>
+
+    <form>
+      <!-- Name -->
+      <div class="mb-4">
+        <label for="name" class="block mb-1 text-sm font-medium text-gray-300"
+          >Name</label
+        >
+        <input
+          id="name"
+          type="text"
+          placeholder="Your name"
+          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="email" class="block mb-1 text-sm font-medium text-gray-300"
+          >Email</label
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="you@gmail.com"
+          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        />
+      </div>
+
+      <!-- Message -->
+      <div class="mb-6">
+        <label
+          for="message"
+          class="block mb-1 text-sm font-medium text-gray-300"
+          >Message</label
+        >
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Your message here..."
+          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        ></textarea>
+      </div>
+
+      <!-- Button -->
+      <div class="text-end">
+        <button
+          type="submit"
+          class="bg-gradient-to-r bg-teal-400 to-teal-700 text-white font-semibold px-6 py-2 rounded shadow transition"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

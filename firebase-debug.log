@@ -1,0 +1,47 @@
+[debug] [2025-06-24T09:14:26.780Z] ----------------------------------------------------------------------
+[debug] [2025-06-24T09:14:26.783Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2025-06-24T09:14:26.784Z] CLI Version:   14.8.0
+[debug] [2025-06-24T09:14:26.784Z] Platform:      linux
+[debug] [2025-06-24T09:14:26.785Z] Node Version:  v22.15.1
+[debug] [2025-06-24T09:14:26.785Z] Time:          Tue Jun 24 2025 14:44:26 GMT+0530 (India Standard Time)
+[debug] [2025-06-24T09:14:26.785Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-24T09:14:26.875Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-24T09:14:26.875Z] > authorizing via signed-in user (s.anandsiva7897@gmail.com)
+[debug] [2025-06-24T09:14:26.875Z] [iam] checking project anand-protfoli for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-24T09:14:26.875Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:26.875Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:26.876Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anand-protfoli:testIamPermissions [none]
+[debug] [2025-06-24T09:14:26.876Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anand-protfoli:testIamPermissions x-goog-quota-user=projects/anand-protfoli
+[debug] [2025-06-24T09:14:26.876Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anand-protfoli:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-24T09:14:28.633Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anand-protfoli:testIamPermissions 200
+[debug] [2025-06-24T09:14:28.633Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anand-protfoli:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-24T09:14:28.633Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:28.633Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:28.634Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anand-protfoli [none]
+[debug] [2025-06-24T09:14:29.151Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anand-protfoli 200
+[debug] [2025-06-24T09:14:29.152Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anand-protfoli {"projectId":"anand-protfoli","projectNumber":"249824387545","displayName":"Anand-Protfoli","name":"projects/anand-protfoli","resources":{"hostingSite":"anand-protfoli"},"state":"ACTIVE","etag":"1_0521749f-cd9e-473c-bb98-da4bc207e50a"}
+[info] 
+[info] === Deploying to 'anand-protfoli'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-06-24T09:14:29.159Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:29.159Z] Checked if tokens are valid: true, expires at: 1750759927357
+[debug] [2025-06-24T09:14:29.159Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anand-protfoli/versions [none]
+[debug] [2025-06-24T09:14:29.159Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anand-protfoli/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-06-24T09:14:30.366Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anand-protfoli/versions 500
+[debug] [2025-06-24T09:14:30.366Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anand-protfoli/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anand-protfoli/versions had HTTP Error: 500, Internal error encountered.
+[debug] [2025-06-24T09:14:30.473Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}

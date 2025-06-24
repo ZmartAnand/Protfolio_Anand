@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css'
+  styleUrl: './skills.component.css',
 })
-export class SkillsComponent {
-
-}
+export class SkillsComponent {}
