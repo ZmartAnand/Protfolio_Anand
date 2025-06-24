@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/portfolio-anand",
+    "public": "dist/portfolio-anand/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
