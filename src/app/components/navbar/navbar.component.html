@@ -201,8 +201,10 @@
 
   <!-- Mobile Menu -->
   @if(isMenuOpen){
-  <div class="lg:hidden bg-slate-900/95 backdrop-blur-md p-6 pt-20">
-    <ul class="flex flex-col gap-y-4 text-white font-medium text-lg">
+  <div
+    class="absolute ps-5 pt-3 w-full bg-slate-900/20 backdrop-blur- text-white lg:hidden z-30"
+  >
+    <ul class="flex flex-col gap-y-4 text-white font-medium text-lg pb-10">
       <li>
         <a
           routerLink="/"
