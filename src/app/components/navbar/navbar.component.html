@@ -1,143 +1,17 @@
-<!-- <div
-  class="fixed top-0 w-full z-50 bg-gradient from-slate-900 via-blue-900 to-slate-900"
->
-  <div class="p-7 lg:ms-12 flex justify-between items-center relative">
-    <button
-      class="lg:hidden m-0 justify-start absolute z-51"
-      (click)="isMenuOpen = !isMenuOpen"
-    >
-      <span
-        class="material-icons text-teal-700 text-4xl transition-transform duration-300"
-        [ngClass]="{ 'rotate-180': isMenuOpen }"
-      >
-        menu
-      </span>
-    </button>
-
-    <div class="ml-10">
-      <a
-        class="text-white text-2xl font-serif tracking-widest font-semibold"
-        routerLink="/"
-        >PORTFOLIO..
-      </a>
-    </div>
-
-    <ul class="hidden lg:flex gap-x-10 mr-40 text-lg text-white font-semibold">
-      <li>
-        <a
-          routerLink="/"
-          routerLinkActive="text-teal-400"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-teal-400"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="about"
-          routerLinkActive="text-teal-400"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-teal-400"
-          >About</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="skills"
-          routerLinkActive="text-teal-400"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-teal-400"
-          >Skills</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="projects"
-          routerLinkActive="text-teal-400"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-teal-400"
-          >Projects</a
-        >
-      </li>
-      <li>
-        <a
-          routerLink="contact"
-          routerLinkActive="text-teal-400"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="hover:text-teal-400"
-          >Contact</a
-        >
-      </li>
-    </ul>
-
-    @if(isMenuOpen){
-    <div
-      class="absolute top-0 left-0 w-full bg-background/50 backdrop-blur-xl text-white lg:hidden z-50"
-    >
-      <ul class="flex flex-col gap-y-3 p-4 text-lg font-semibold">
-        <li class="mt-20">
-          <a
-            routerLink="/"
-            routerLinkActive="text-teal-400"
-            (click)="isMenuOpen = !isMenuOpen"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-teal-400"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="about"
-            (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-teal-400"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-teal-400"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="skills"
-            (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-teal-400"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-teal-400"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="projects"
-            (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-teal-400"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-teal-400"
-            >Projects</a
-          >
-        </li>
-        <li>
-          <a
-            routerLink="contact"
-            (click)="isMenuOpen = !isMenuOpen"
-            routerLinkActive="text-teal-400"
-            [routerLinkActiveOptions]="{ exact: true }"
-            class="hover:text-teal-00"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </div>
-    }
-  </div>
-</div> -->
-
 <!-- Fixed Navbar -->
 <div
   class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 shadow-md"
 >
   <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
     <!-- Logo -->
-    <div class="text-white text-xl font-bold tracking-wide">
+    <div
+      class="text-white text-xl font-bold tracking-wide flex items-center gap-3"
+    >
+      <img
+        src="/images/image (2).png"
+        alt="Profile"
+        class="w-10 h-10 rounded-full shadow-md"
+      />
       <a routerLink="/">PORTFOLIO..</a>
     </div>
 
