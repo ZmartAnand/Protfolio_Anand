@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="fixed top-0 w-full z-50 bg-gradient from-slate-900 via-blue-900 to-slate-900"
 >
   <div class="p-7 lg:ms-12 flex justify-between items-center relative">
@@ -129,4 +129,121 @@
     </div>
     }
   </div>
+</div> -->
+
+<!-- Fixed Navbar -->
+<div
+  class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 shadow-md"
+>
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <!-- Logo -->
+    <div class="text-white text-xl font-bold tracking-wide">
+      <a routerLink="/">PORTFOLIO..</a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden lg:flex gap-x-8 text-white font-semibold text-base">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="text-teal-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="hover:text-teal-400"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="about"
+          routerLinkActive="text-teal-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="hover:text-teal-400"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="skills"
+          routerLinkActive="text-teal-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="hover:text-teal-400"
+          >Skills</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="projects"
+          routerLinkActive="text-teal-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="hover:text-teal-400"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="contact"
+          routerLinkActive="text-teal-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="hover:text-teal-400"
+          >Contact</a
+        >
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button
+      class="lg:hidden text-white text-3xl"
+      (click)="isMenuOpen = !isMenuOpen"
+    >
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if(isMenuOpen){
+  <div class="lg:hidden bg-slate-900/95 backdrop-blur-md p-6 pt-20">
+    <ul class="flex flex-col gap-y-4 text-white font-medium text-lg">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="text-teal-400"
+          (click)="isMenuOpen = false"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="about"
+          routerLinkActive="text-teal-400"
+          (click)="isMenuOpen = false"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="skills"
+          routerLinkActive="text-teal-400"
+          (click)="isMenuOpen = false"
+          >Skills</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="projects"
+          routerLinkActive="text-teal-400"
+          (click)="isMenuOpen = false"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="contact"
+          routerLinkActive="text-teal-400"
+          (click)="isMenuOpen = false"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+  }
 </div>
