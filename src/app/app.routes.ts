@@ -6,7 +6,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 
 export const routes: Routes = [
-  { path: '', component: HeroComponent },
+  { path: '', redirectTo: '/hero', pathMatch: 'full' },
+  { path: 'hero', component: HeroComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
