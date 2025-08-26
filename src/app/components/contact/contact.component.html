@@ -17,58 +17,129 @@
       <span class="text-teal-400 text-xl">📩</span>
       <h3 class="text-xl font-bold">Send Me a Message</h3>
     </div>
-
-    <form>
+    <form
+      #contactForm="ngForm"
+      (ngSubmit)="sendEmail(contactForm)"
+      class="mt-6 space-y-4"
+    >
       <!-- Name -->
-      <div class="mb-4">
-        <label for="name" class="block mb-1 text-sm font-medium text-gray-300"
-          >Name</label
+      <div>
+        <label
+          for="from_name"
+          class="block mb-1 text-sm font-medium text-gray-300"
+          >Your Name</label
         >
-        <input
-          id="name"
-          type="text"
-          placeholder="Your name"
-          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
-        />
+        <div
+          class="flex items-center bg-slate-700 rounded border border-slate-600 focus-within:ring-2 focus-within:ring-teal-500"
+        >
+          <span class="px-3 text-teal-400">
+            <i class="fas fa-user"></i>
+          </span>
+          <input
+            type="text"
+            id="from_name"
+            name="from_name"
+            placeholder="Enter your name"
+            class="flex-1 px-3 py-2 bg-slate-700 text-white placeholder-gray-400 rounded-r outline-none"
+            ngModel
+            required
+          />
+        </div>
       </div>
 
       <!-- Email -->
-      <div class="mb-4">
-        <label for="email" class="block mb-1 text-sm font-medium text-gray-300"
-          >Email</label
+      <div>
+        <label
+          for="reply_to"
+          class="block mb-1 text-sm font-medium text-gray-300"
+          >Your Email</label
         >
-        <input
-          id="email"
-          type="email"
-          placeholder="you@gmail.com"
-          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
-        />
+        <div
+          class="flex items-center bg-slate-700 rounded border border-slate-600 focus-within:ring-2 focus-within:ring-teal-500"
+        >
+          <span class="px-3 text-teal-400">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <input
+            type="email"
+            id="reply_to"
+            name="reply_to"
+            placeholder="Enter your email"
+            class="flex-1 px-3 py-2 bg-slate-700 text-white placeholder-gray-400 rounded-r outline-none"
+            ngModel
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Subject -->
+      <div>
+        <label
+          for="subject"
+          class="block mb-1 text-sm font-medium text-gray-300"
+          >Subject</label
+        >
+        <div
+          class="flex items-center bg-slate-700 rounded border border-slate-600 focus-within:ring-2 focus-within:ring-teal-500"
+        >
+          <span class="px-3 text-teal-400">
+            <i class="fas fa-tag"></i>
+          </span>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What is this regarding?"
+            class="flex-1 px-3 py-2 bg-slate-700 text-white placeholder-gray-400 rounded-r outline-none"
+            ngModel
+            required
+          />
+        </div>
       </div>
 
       <!-- Message -->
-      <div class="mb-6">
+      <div>
         <label
           for="message"
           class="block mb-1 text-sm font-medium text-gray-300"
-          >Message</label
+          >Your Message</label
         >
-        <textarea
-          id="message"
-          rows="4"
-          placeholder="Your message here..."
-          class="w-full px-4 py-2 rounded bg-slate-700 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
-        ></textarea>
+        <div
+          class="flex items-start bg-slate-700 rounded border border-slate-600 focus-within:ring-2 focus-within:ring-teal-500"
+        >
+          <span class="px-3 pt-2 text-teal-400">
+            <i class="fas fa-comment"></i>
+          </span>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="How can we help you?"
+            class="flex-1 px-3 py-2 bg-slate-700 text-white placeholder-gray-400 rounded-r outline-none"
+            ngModel
+            required
+          ></textarea>
+        </div>
       </div>
 
-      <!-- Button -->
-      <div class="text-end">
+      <!-- Send Button -->
+      <div class="text-center mt-4">
         <button
           type="submit"
-          class="bg-gradient-to-r bg-teal-400 to-teal-700 text-white font-semibold px-6 py-2 rounded shadow transition"
+          class="bg-gradient-to-r from-teal-400 to-teal-700 text-white font-semibold px-6 py-2 rounded shadow transition disabled:opacity-50"
+          [disabled]="contactForm.invalid"
         >
-          Send Message
+          <i class="fas fa-paper-plane me-2"></i>Send Message
         </button>
       </div>
     </form>
+    <!-- Toast -->
+    <div
+      *ngIf="toastMessage"
+      class="fixed bottom-6 right-6 bg-gradient-to-r from-teal-400 to-teal-700 text-white px-5 py-3 rounded-lg shadow-lg flex items-center space-x-2 animate-fade-in"
+    >
+      <span>{{ toastMessage }}</span>
+      <button (click)="toastMessage = null" class="ml-2 font-bold">✕</button>
+    </div>
   </div>
 </section>
